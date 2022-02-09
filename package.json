@@ -35,6 +35,7 @@
     "cli-width": "^3.0.0",
     "fixed-width-string": "^2.0.0",
     "kleur": "^4.1.4",
+    "stdin-blocker": "^1.0.0",
     "tiny-cursor": "^1.0.0"
   },
   "devDependencies": {

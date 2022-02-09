@@ -2,6 +2,7 @@
 /* IMPORT */
 
 import color from 'kleur';
+import Blocker from 'stdin-blocker';
 import Cursor from 'tiny-cursor';
 import {FRAMES, FRAMES_INTERVAL, SYMBOL_ERROR, SYMBOL_SUCCESS, SYMBOL_WARNING} from './constants';
 import {writeLine} from './utils';
@@ -33,6 +34,7 @@ class Spinner {
 
     this.message = message;
 
+    Blocker.block ();
     Cursor.hide ();
 
     this.intervalId = setInterval ( this.render, FRAMES_INTERVAL );
@@ -67,6 +69,7 @@ class Spinner {
 
     if ( !this.intervalId ) return;
 
+    Blocker.unblock ();
     Cursor.show ();
 
     clearInterval ( this.intervalId );
