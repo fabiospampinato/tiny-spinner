@@ -28,7 +28,7 @@ spinner.start ( 'Doing something' );
 
 // Update message
 
-spinner.start ( 'Still doing something' );
+spinner.update ( 'Still doing something' );
 
 // Exit with a warning message
 
