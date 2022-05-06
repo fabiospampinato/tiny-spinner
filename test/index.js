@@ -1,9 +1,8 @@
 
 /* IMPORT */
 
-const color = require ( 'kleur' );
-const delay = require ( 'promise-resolve-timeout' );
-const {default: Spinner} = require ( '../dist' );
+import {setTimeout as delay} from 'node:timers/promises';
+import Spinner from '../dist/index.js';
 
 /* MAIN */
 

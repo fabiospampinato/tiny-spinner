@@ -1,20 +1,27 @@
 
 /* IMPORT */
 
-import width from 'cli-width';
-import truncate from 'fixed-width-string';
-import readline from 'readline';
+import truncate from 'tiny-truncate';
 
 /* MAIN */
 
 const writeLine = ( line: string ): void => {
 
-  readline.clearLine ( process.stdout, 0 );
-  readline.cursorTo ( process.stdout, 0 );
+  line = truncate ( line );
 
-  line = truncate ( line, width () );
+  const process = globalThis.process;
 
-  process.stdout.write ( line );
+  if ( process ) {
+
+    process.stdout?.clearLine?.( 0 );
+    process.stdout?.cursorTo?.( 0 );
+    process.stdout?.write?.( line );
+
+  } else {
+
+    console.log ( line );
+
+  }
 
 };
 

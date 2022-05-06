@@ -1,8 +1,8 @@
 
 /* IMPORT */
 
-import color from 'kleur';
 import Blocker from 'stdin-blocker';
+import colors from 'tiny-colors';
 import Cursor from 'tiny-cursor';
 import {FRAMES, FRAMES_INTERVAL, SYMBOL_ERROR, SYMBOL_SUCCESS, SYMBOL_WARNING} from './constants';
 import {writeLine} from './utils';
@@ -13,7 +13,7 @@ class Spinner {
 
   /* VARIABLES */
 
-  private intervalId?: NodeJS.Timer;
+  private intervalId?: number;
   private iteration = 0;
   private message = '';
 
@@ -22,7 +22,7 @@ class Spinner {
   render = (): void => {
 
     const frame = FRAMES[( this.iteration++ ) % FRAMES.length];
-    const line = `${color.cyan ( frame )} ${this.message}`;
+    const line = `${colors.cyan ( frame )} ${this.message}`;
 
     writeLine ( line );
 
@@ -49,19 +49,19 @@ class Spinner {
 
   warning = ( message: string ): void => {
 
-    return this.stop ( `${color.yellow ( SYMBOL_WARNING )} ${message}` );
+    return this.stop ( `${colors.yellow ( SYMBOL_WARNING )} ${message}` );
 
   };
 
   success = ( message: string ): void => {
 
-    return this.stop ( `${color.green ( SYMBOL_SUCCESS )} ${message}` );
+    return this.stop ( `${colors.green ( SYMBOL_SUCCESS )} ${message}` );
 
   };
 
   error = ( message: string ): void => {
 
-    return this.stop ( `${color.red ( SYMBOL_ERROR )} ${message}` );
+    return this.stop ( `${colors.red ( SYMBOL_ERROR )} ${message}` );
 
   };
 
