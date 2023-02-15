@@ -24,12 +24,12 @@
   ],
   "dependencies": {
     "stdin-blocker": "^2.0.0",
-    "tiny-colors": "^2.0.1",
+    "tiny-colors": "^2.0.2",
     "tiny-cursor": "^2.0.0",
     "tiny-truncate": "^1.0.2"
   },
   "devDependencies": {
-    "tsex": "^1.1.2",
-    "typescript": "^4.6.4"
+    "tsex": "^2.2.0",
+    "typescript": "^4.9.5"
   }
 }
