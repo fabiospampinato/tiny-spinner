@@ -13,9 +13,12 @@ const writeLine = ( line: string ): void => {
 
   if ( process ) {
 
+    const isTerminal = /(\r?\n|\r)$/.test ( line );
+
     process.stdout?.cursorTo?.( 0 );
-    process.stdout?.write?.( line );
+    process.stdout?.write?.( line.trim () );
     process.stdout?.clearLine?.( 1 );
+    process.stdout?.write?.( isTerminal ? '\r\n' : '' );
 
   } else {
 
