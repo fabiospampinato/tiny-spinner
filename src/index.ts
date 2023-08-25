@@ -49,7 +49,7 @@ class Spinner {
 
   warning = ( message: string ): void => {
 
-    return this.stop ( `${colors.yellow ( SYMBOL_WARNING )} ${message}` );
+    return this.stop ( `${colors.yellow.bold ( SYMBOL_WARNING )} ${message}` );
 
   };
 

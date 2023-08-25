@@ -9,7 +9,7 @@ const SYMBOL_ERROR = '✖';
 
 const SYMBOL_SUCCESS = '✔';
 
-const SYMBOL_WARNING = '⚠';
+const SYMBOL_WARNING = '!';
 
 /* EXPORT */
 
