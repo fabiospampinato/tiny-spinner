@@ -2,7 +2,7 @@
   "name": "tiny-spinner",
   "repository": "github:fabiospampinato/tiny-spinner",
   "description": "A simple, yet beautiful, CLI spinner.",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "type": "module",
   "main": "dist/index.js",
   "exports": "./dist/index.js",
