@@ -11,7 +11,9 @@
     "clean": "tsex clean",
     "compile": "tsex compile",
     "compile:watch": "tsex compile --watch",
-    "test": "node test/index.js",
+    "test:general": "node test/general.js",
+    "test:piping": "node test/piping.js > stdout.txt && cat stdout.txt && rm stdout.txt",
+    "test": "npm run test:general && npm run test:piping",
     "prepublishOnly": "npm run clean && npm run compile"
   },
   "keywords": [

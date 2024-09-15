@@ -5,7 +5,7 @@ import Blocker from 'stdin-blocker';
 import colors from 'tiny-colors';
 import Cursor from 'tiny-cursor';
 import {FRAMES, FRAMES_INTERVAL, SYMBOL_ERROR, SYMBOL_SUCCESS, SYMBOL_WARNING} from './constants';
-import {writeLine} from './utils';
+import {isTTY, writeLine} from './utils';
 
 /* MAIN */
 
@@ -20,6 +20,8 @@ class Spinner {
   /* API */
 
   render = (): void => {
+
+    if ( !isTTY () ) return;
 
     const frame = FRAMES[( this.iteration++ ) % FRAMES.length];
     const line = `${colors.cyan ( frame )} ${this.message}`;

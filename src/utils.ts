@@ -5,6 +5,12 @@ import truncate from 'tiny-truncate';
 
 /* MAIN */
 
+const isTTY = (): boolean => {
+
+  return !!globalThis.process?.stdout?.isTTY;
+
+};
+
 const writeLine = ( line: string ): void => {
 
   line = truncate ( line );
@@ -30,4 +36,4 @@ const writeLine = ( line: string ): void => {
 
 /* EXPORT */
 
-export {writeLine};
+export {isTTY, writeLine};
