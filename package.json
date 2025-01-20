@@ -3,7 +3,7 @@
   "repository": "github:fabiospampinato/tiny-spinner",
   "description": "A simple, yet beautiful, CLI spinner.",
   "license": "MIT",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "type": "module",
   "main": "dist/index.js",
   "exports": "./dist/index.js",
