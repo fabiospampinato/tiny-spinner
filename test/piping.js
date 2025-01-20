@@ -1,7 +1,7 @@
 
 /* IMPORT */
 
-import {setTimeout as delay} from 'node:timers/promises';
+import delay from 'promise-resolve-timeout';
 import Spinner from '../dist/index.js';
 
 /* MAIN */
