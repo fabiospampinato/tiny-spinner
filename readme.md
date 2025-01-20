@@ -10,7 +10,7 @@ A simple, yet beautiful, CLI spinner.
 ## Install
 
 ```sh
-npm install --save tiny-spinner
+npm install tiny-spinner
 ```
 
 ## Usage
